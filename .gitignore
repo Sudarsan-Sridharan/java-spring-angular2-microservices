@@ -11,6 +11,7 @@
 /.idea
 .project
 .classpath
+.gradle
 .c9/
 *.launch
 .settings/
