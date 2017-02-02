@@ -1,0 +1,17 @@
+version: '2'
+services:
+  wepoll-ui-webpack-docker:
+    container_name: wepoll-ui-webpack-docker
+    build:
+      context: .
+      dockerfile: ./.docker/wepoll-ui-webpack-docker.development.dockerfile
+    command: "npm start --host=0.0.0.0"
+    ports:
+      - 4200:4200
+      - 49152:49152
+    networks:
+      - dev-network
+
+networks:
+  dev-network:
+    driver: bridge
